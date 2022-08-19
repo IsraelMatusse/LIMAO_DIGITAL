@@ -124,12 +124,8 @@ $username=$_POST['username'];
   
     if(!empty($username && $senha) ){ 
     if($p->login_administrador($username, $senha)){
-        
-        ?>
-        <script>
-            window.alert("Acesso concedido");
-        </script>
-        <?php
+        header('location: eventos.html');
+      
         }else{
             ?>
             <script>
